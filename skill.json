@@ -1,0 +1,24 @@
+{
+  "name": "genpark-personal-agent-neuroplasticity-synaptic-pruning-sleep-skill",
+  "version": "1.0.0",
+  "description": "Models Tononi-Cirelli Synaptic Homeostasis (SHY), evaluates Slow-Wave Sleep delta down-scaling efficiency, and schedules Targeted Memory Reactivation (TMR).",
+  "tools": [
+    {
+      "name": "model_synaptic_homeostasis_scaling",
+      "description": "Models Tononi-Cirelli synaptic saturation and SWS delta renormalization efficiency.",
+      "parameters": {
+        "waking_learning_hours": "float",
+        "novelty_density_score": "float (optional, default 7.5)",
+        "slow_wave_sleep_hours": "float (optional, default 1.8)"
+      }
+    },
+    {
+      "name": "generate_targeted_memory_reactivation_cues",
+      "description": "Prescribes pre-sleep TMR review timing and olfactory/associative consolidation cues.",
+      "parameters": {
+        "core_learning_items": "list of strings",
+        "target_sleep_onset": "string (optional, default '23:00')"
+      }
+    }
+  ]
+}
